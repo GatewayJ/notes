@@ -21,7 +21,9 @@ jobs:
       uses: webfactory/ssh-agent@v0.1.1
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
     - name: Setup knownhosts
       run: ssh-keyscan demoio.cn >> ~/.ssh/known_hosts
+      
     - name: Run SSH Command
       run: ssh root@demoio.cn "rm -rf ~/mysite/content/posts/* && cd ~/mysite/content/posts/  && git clone https://github.com/GatewayJ/notes.git && cd notes  && yes |mv * ../ && cd ~/mysite/ && hugo"
