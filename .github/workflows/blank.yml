@@ -1,0 +1,27 @@
+name: Deploy Blog
+
+on:
+  push:
+    branches:
+      - main  # 只在main上push触发部署
+
+    paths-ignore:   # 下列文件的变更不触发部署，可以自行添加
+      - README.md
+      - LICENSE
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest   # 使用ubuntu系统镜像运行自动化脚本
+
+    steps:
+    - uses: actions/checkout@v2   # 第一步，下载代码仓库
+
+    - name: Deploy to Server  # 第四步，rsync推文件
+      uses: webfactory/ssh-agent@v0.1.1
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+    - name: Setup knownhosts
+      run: ssh-keyscan demoio.cn >> ~/.ssh/known_hosts
+    - name: Run SSH Command
+      run: ssh root@demoio.cn "rm -rf ~/mysite/content/posts/* && cd ~/mysite/content/posts/  && git clone https://github.com/GatewayJ/notes.git && cd notes  && yes |mv * ../ && cd ~/mysite/ && hugo"
