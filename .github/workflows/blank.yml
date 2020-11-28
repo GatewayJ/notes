@@ -18,7 +18,7 @@ jobs:
     - uses: actions/checkout@v2   # 第一步，下载代码仓库
 
     - name: Deploy to Server  # 第四步，rsync推文件
-      uses: webfactory/ssh-agent@v0.1.1
+      uses: webfactory/ssh-agent@v0.4.1
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
