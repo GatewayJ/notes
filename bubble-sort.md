@@ -2,7 +2,7 @@
 author : "jihongwei"
 tags : ["算法"]
 date : 2020-12-07T11:24:00Z
-title : "dubble-sort"
+title : "bubble-sort"
 ---
 
 ## 一、经典算法:冒泡排序
