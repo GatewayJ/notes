@@ -41,7 +41,7 @@ http://blog.csdn.net/u012927281/article/details/51602898
 
 LinuxThread与NPTL都是采用这种模型。
 
-![用户空间线程](http://demoio.cn:90/blog-image/%E7%94%A8%E6%88%B7%E7%A9%BA%E9%97%B4%E7%BA%BF%E7%A8%8B.png)
+![用户空间线程](https://demoio.cn:90/blog-image/%E7%94%A8%E6%88%B7%E7%A9%BA%E9%97%B4%E7%BA%BF%E7%A8%8B.png)
 
 
 
@@ -81,7 +81,7 @@ LinuxThread与NPTL都是采用这种模型。
 
 内核线程驻留在内核空间，它们是内核对象。有了内核线程，每个用户线程被映射或绑定到一个内核线程。用户线程在其生命期内都会绑定到该内核线程。一旦用户线程终止，两个线程都将离开系统。这被称作”一对一”线程映射，
 
-![一对一的内核级线程](http://demoio.cn:90/blog-image/一对一的内核级线程.png)
+![一对一的内核级线程](https://demoio.cn:90/blog-image/一对一的内核级线程.png)
 
 
 
@@ -108,4 +108,4 @@ LinuxThread与NPTL都是采用这种模型。
 
 
 
-![轻量级线程的组合方式](http://demoio.cn:90/blog-image/轻量级线程的组合方式.png)
+![轻量级线程的组合方式](https://demoio.cn:90/blog-image/轻量级线程的组合方式.png)
