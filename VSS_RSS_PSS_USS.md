@@ -1,3 +1,9 @@
+---
+author : "jihongwei"
+tags : ["linux"]
+date : 2018-03-10T11:24:00Z
+title : "VSS RSS PSS USS"
+---
 
 一般来说内存占用大小有如下规律：VSS >= RSS >= PSS >= USS
 
