@@ -1,4 +1,9 @@
-
+---
+author : "jihongwei"
+tags : ["linux"]
+date : 2018-02-20T11:24:00Z
+title : "进程，线程"
+---
 
 http://blog.csdn.net/gatieme/article/details/51892437
 http://blog.csdn.net/u012927281/article/details/51602898
