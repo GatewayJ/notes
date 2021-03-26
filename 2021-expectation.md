@@ -16,8 +16,7 @@ title : "2021年的学习计划"
 #### 读书
 
 &nbsp;&nbsp;`深入理解操作系统`
-&nbsp;&nbsp;`redis的小册子`
-输出读书笔记
+&nbsp;&nbsp;~~`redis的小册子`~~
 #### k8s
 
 &nbsp;&nbsp;学习k8s的基本使用和源码架构
