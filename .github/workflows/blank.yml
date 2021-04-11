@@ -26,4 +26,4 @@ jobs:
       run: ssh-keyscan demoio.cn >> ~/.ssh/known_hosts
       
     - name: Run SSH Command
-      run: ssh root@demoio.cn "rm -rf ~/mysite/content/posts/* && cd ~/mysite/content/posts/  && git clone https://github.com/GatewayJ/notes.git && cd notes  && yes |mv * ../ && cd ~/mysite/ && hugo"
+      run: ssh root@demoio.cn "rm -rf ~/mysite/content/posts/* && cd ~/mysite/content/posts/  && git clone https://github.com/GatewayJ/notes.git && cd notes  && mv * ../ && cd ~/mysite/ && hugo"

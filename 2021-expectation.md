@@ -16,6 +16,7 @@ title : "2021年的学习计划"
 #### 读书
 
 &nbsp;&nbsp;`深入理解操作系统`
+
 &nbsp;&nbsp;~~`redis的小册子`~~
 #### k8s
 
@@ -24,4 +25,3 @@ title : "2021年的学习计划"
 #### golang项目
 
 &nbsp;&nbsp;完成`go语言编程之旅`的项目
-&nbsp;&nbsp;完成zinx的教程项目
