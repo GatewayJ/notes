@@ -48,5 +48,5 @@ CREATE TABLE daily (
 
 消费者  ./kafka-console-consumer.sh  --topic my_topic --bootstrap-server 127.0.0.1:9093  --from-beginning
 
-移动游标 ./kafka-consumer-groups.h --bootstrap-server 127.0.0.1:9093 --topic my_topic --group kafka_group_test --excute  --reset-offsets  --to-latest 
+移动游标 ./kafka-consumer-groups.sh --bootstrap-server 127.0.0.1:9093 --topic my_topic --group kafka_group_test --execute  --reset-offsets  --to-latest 
 ```
