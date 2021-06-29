@@ -1,9 +1,6 @@
 ---
-author : "jihongwei"
-tags : ["about"]
-date : 2021-05-19T11:24:00Z
-title : "自我介绍"
+title: "About"
+date: 2020-11-02T00:17:23+08:00
 ---
-
-
-你好 这是我的博客
+this is my self and this about page.
+I an K.
