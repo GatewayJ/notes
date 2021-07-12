@@ -1,7 +1,7 @@
 ---
 author : "jihongwei"
 tags : ["分布式"]
-date : 2021-01-24T11:24:00Z
+date : 2021-01-26T11:24:00Z
 title : "paxos基本工作方式"
 ---
 
