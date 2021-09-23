@@ -82,3 +82,11 @@ for imageName in ${images[@]} ; do
     docker rmi registry.cn-hangzhou.aliyuncs.com/google_containers/$imageName
 done
 ```
+
+
+>[源码阅读](https://www.bookstack.cn/read/source-code-reading-notes/README.md)
+
+>[本地环境搭建借鉴](https://zhuanlan.zhihu.com/p/332751754)
+[本地环境搭建借鉴](https://cloud.tencent.com/developer/article/1402449)
+[本地环境搭建借鉴](https://blog.csdn.net/qianghaohao/article/details/104596991)
+[本地环境搭建借鉴](https://cloud.tencent.com/developer/article/1433219)
