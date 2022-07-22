@@ -67,3 +67,4 @@ struct eventpoll对象的详细结构
 在ET模式下， 缓冲区从不可读变成可读，会唤醒应用进程，缓冲区数据变少的情况，则不会再唤醒应用进程。
 
 > https://mp.weixin.qq.com/s?__biz=MzUyNzgyNzAwNg==&mid=2247483925&idx=1&sn=1ac3e863594745c7466b0e88a688b203&scene=21#wechat_redirect
+https://new.qq.com/omn/20220329/20220329A09C7900.html
