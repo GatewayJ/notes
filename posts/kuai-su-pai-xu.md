@@ -7,7 +7,14 @@ title : "快速排序"
 
 ![quicksort](../image/quicksort.png)
 
-````
+# 示例：
+```shell
+array = [2, 3, 5, 7, 1, 4, 6, 15, 5, 2, 7, 9, 10, 15, 9, 17, 12]
+print(quick_sort(array))
+# 输出为[1, 2, 2, 3, 4, 5, 5, 6, 7, 7, 9, 9, 10, 12, 15, 15, 17]
+```
+
+```python
 def quick_sort(data):
     if len(data) >= 2:  # 递归入口及出口
         mid = data[len(data) // 2]  # 选取基准值，也可以选取第一个或最后一个元素
@@ -23,12 +30,6 @@ def quick_sort(data):
         return data
 ```
 
-# 示例：
-```
-array = [2, 3, 5, 7, 1, 4, 6, 15, 5, 2, 7, 9, 10, 15, 9, 17, 12]
-print(quick_sort(array))
-# 输出为[1, 2, 2, 3, 4, 5, 5, 6, 7, 7, 9, 9, 10, 12, 15, 15, 17]
-```
 ```golang
 import (
    "fmt"
@@ -66,4 +67,5 @@ func partition(array []int, left, right int) int {
    array[right] = baseNum
    return right
 }
+
 ````
