@@ -1,6 +1,14 @@
+---
+author : "jihongwei"
+tags : ["算法"]
+date : 2022-10-25T11:24:00Z
+title : "快速排序"
+---
+
 # 快速排序
 
-<figure><img src="../image/quicksort.png" alt=""><figcaption></figcaption></figure>
+关于快速排序的复习
+![quicksort](../image/quicksort.png)
 
 ````
 def quick_sort(data):
