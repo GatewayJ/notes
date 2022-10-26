@@ -25,7 +25,7 @@
   * [elasticsearch-helloword](posts/es-helloword.md)
   * [k8s本地调试环境搭建](posts/k8s-local-setup.md)
   * [mysql事务相关的概念](<posts/mysql-transactio- concept.md>)
-  * [快速排序](posts/quicksort20221025\_.md)
+  * [快速排序](posts/kuai-su-pai-xu.md)
   * [二、经典算法:选择排序](posts/selection-sort.md)
   * [进程，线程](posts/thead-process.md)
   * [记一次线上bug](posts/work\_diary\_01.md)
