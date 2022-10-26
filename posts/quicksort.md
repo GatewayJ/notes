@@ -7,7 +7,7 @@ title : "快速排序"
 
 # 快速排序
 
-一轮的运行流程
+
 
 ![quicksort](../image/quicksort.png)
 
