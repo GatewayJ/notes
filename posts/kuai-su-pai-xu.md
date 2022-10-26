@@ -5,9 +5,6 @@ date : 2022-10-25T11:24:00Z
 title : "快速排序"
 ---
 
-# 快速排序
-
-关于快速排序的复习
 ![quicksort](../image/quicksort.png)
 
 ````
