@@ -12,12 +12,13 @@ title : "clickhouse原理"
 使用方式：
 
 &nbsp;&nbsp;MergeTree会先通过稀疏索引(primary.idx)找到对应数据的偏移量信息(column.mrk)，再通过偏移量直接从数据文件(column.bin)读取数据。所以主键索引和数据标记的间隔粒度相同，均有index_granularity参数决定，数据文件也会依据该参数生成压缩数据块。
-![clickhouse](https://demoio.cn:90/blog-image/clickhouse数据块.png)
+![clickhouse](../image/clickhouse%20%E5%B1%82%E6%AC%A1.webp)
+![clickhouse](../image/clickhouse.png)
 1. 给定index_granularity的标号，去.mrk文件里面读出压缩块偏移量，然后再找到下一个有变化的偏移量，二者之间就是本个granularity的压缩块的位置；
 2. 把压缩块拉到内存里进行解压；
 3. 根据.mrk文件中的解压缩块的偏移量（块内偏移量，类似于第一步），扫描相应位置，读到数据。
 
-![clickhouse](https://demoio.cn:90/blog-image/clickhouse索引文件结构.png)
+![clickhouse](../image/%E7%B4%A2%E5%BC%95%E6%96%87%E4%BB%B6.png)
 
 &nbsp;&nbsp;在Clickhouse中，数据表中最终的数据是按列存储在Part目录下的各自对应的列存文件下的。那么，查询时应该如何从不同的列存文件中查找到同属于某一行的数据？
 
@@ -27,11 +28,11 @@ title : "clickhouse原理"
 
 &nbsp;&nbsp;索引文件：
 
-![clickhouse](https://demoio.cn:90/blog-image/索引文件内容示例图.png)
+![clickhouse](../image/%E7%B4%A2%E5%BC%95%E6%96%87%E4%BB%B6.png)
 
 &nbsp;&nbsp;数据标记文件：
 
-![clickhouse](https://demoio.cn:90/blog-image/标记文件示例图.png)
+![clickhouse](../image/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A0%87%E8%AE%B0%E6%96%87%E4%BB%B6.png)
 
 
 &nbsp;&nbsp;这里的行号其实只是用于关联起索引和标记两个表，而这两个表的数据在行方向其实是一一顺序对应的，因此行号其实是实际上是不需要存在文件中的，这也是Clickhouse追求极致性能，数据尽量精简的一个体现。可以通过od查看一下真实的数据索引文件中和数据标记文件中的数据：
@@ -83,15 +84,15 @@ root@clickhouse-0:20210110_0_123_3_341# od -l -j 0 -N 240 --width=24 ./value9.mr
 
 &nbsp;&nbsp;对于skipping索引GRANULARITY 是稀疏点选择上的 granule 颗粒度， GRANULARITY 1 表示每 1 个 granule 选取一个：
 
-![clickhouse](https://demoio.cn:90/blog-image/clickhouse_granularity_1.png)
+![clickhouse](../image/granularity1.png)
 
 &nbsp;&nbsp;如果定义为GRANULARITY 2 ，则 2 个 granule 选取一个：
 
-![clickhouse](https://demoio.cn:90/blog-image/clickhouse_granularity_2.png)
+![clickhouse](../image/granularity2.png)
 
 &nbsp;&nbsp;全景图:
 
-![clickhouse](https://demoio.cn:90/blog-image/clickhouse_索引全景图.png)
+![clickhouse](../image/1%E5%85%A8%E6%99%AF%E5%9B%BE.png)
 
 检索过程：
 MergeTree存储在收到一个select查询时会先抽取出查询中的分区键和主键条件的KeyCondition，KeyCondition类上实现了以下三个方法，用于判断过滤条件可能满足的Mark Range。
